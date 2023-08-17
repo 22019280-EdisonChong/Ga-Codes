@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Item1</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+<style>
+  
+    nav{
+        padding: 10px;
+        opacity: 90%;
+        background-color: black;
+        height: 50px ; 
+        color: whitesmoke;
+    }
+
+    body{
+        background-image:  url("featur.png");
+     
+    }
+
+    .flex{
+        display :flex;
+    }
+
+    .navleft{
+        width:70%;
+    }
+
+    
+    .navright{
+        
+        width:30%;
+
+    }
+
+    .left{
+        
+        text-align: center;
+        width:50%;
+    }
+
+    
+    .right{
+        
+        width:50%;
+
+    }
+
+    .button {
+        background-color: black;
+        border: none;
+        color: whitesmoke;
+        align-items: right;
+        font-size: 30px;
+        border-radius: 5px;
+    }
+
+
+    
+    article{
+        margin-top: 30px;
+    }
+
+    p{
+        text-align: left;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    label{
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+    }
+
+    input{
+        
+        font-size: 30px;
+    }
+</style>
+
+
+</head>
+
+
+<body>
+  
+
+  <header>
+    <nav>
+        
+        <div class="flex">
+
+        <div class="navleft">
+            <a href="homepage.html"><button class="button">PayNotNow</button></a>
+        </div>
+        
+        <div class="navright">
+            <a href="homepage.html"><button class="button">Home</button></a>
+            <a href="shop.html"><button class="button">Shop</button></a>
+            <a href="featured.html"><button class="button">About Us</button></a>
+        </div>
+        </div>
+
+    </nav>
+
+
+  </header>
+
+  <section>
+    
+    <article>
+
+        <div class="flex">
+
+        <div class="left">
+        <input type="image" src="pr8.webp" >
+        </div>
+
+        <div class="right">
+            <p>12H Retractable Waterproof Eyeliner <br> <br>
+                $19.00 <br> 
+                3 payments of $6.33 with <a href="payment.html"><button class="button">PayNotNow</button></a>
+            </p>
+                <label for="userInput">QTY:</label>
+                <input type="text" id="userInput" placeholder="Enter quantity here...">
+
+                <a href="checkout.html"><button class="button" 
+                    onclick="return checkLoginStatus()">Checkout</button>
+                </a>
+        </div>
+        </div>
+    
+
+    </article>
+
+  </section>
+
+  <footer>
+   
+  </footer>
+
+
+  
+</body>
+
+</html>

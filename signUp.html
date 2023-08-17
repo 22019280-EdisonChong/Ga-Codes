@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Sign Up Page</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <style>
+            nav{
+                padding: 10px;
+                opacity: 90%;
+                background-color: black;
+                height: 50px ; 
+                color: whitesmoke;
+            }
+
+            .flex{
+            display :flex;
+            }
+
+            .left{
+                width:60%;
+            }
+
+            
+            .right{
+                width:40%;
+
+            }
+
+            body{
+            background-image:  url("reih.webp");
+        
+            }
+            .button {
+                background-color: black;
+                border: none;
+                color: whitesmoke;
+                align-items: right;
+                font-size: 30px;
+                border-radius: 5px;
+            }
+
+
+
+            .signup-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .signup-form {
+                background-color: whitesmoke;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .signup-input {
+                width: 90%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .signup-button {
+                padding: 10px;
+                background-color: black;
+                border: none;
+                color: whitesmoke;
+                font-size: 18px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                    
+                <div class="flex">
+
+                    <div class="left">
+                        <a href="homepage.html"><button class="button">PayNotNow</button></a>
+                    </div>
+                    
+                    <div class="right">
+                        <a href="featured.html"><button class="button">Featured</button></a>
+                        <a href="shop.html"><button class="button">Shop</button></a>
+                        <a href="aboutUs.html"><button class="button">About Us</button></a>
+                        <a href="login.html"><button class="button">Login</button></a>
+                    </div>
+                    </div>
+            </nav>
+        </header>
+
+    <section>
+        <div class="signup-container">
+            <form class="signup-form" id="signupForm">
+                <h2>Sign Up</h2>
+                <input type="text" class="signup-input" placeholder="Username" id="username" required>
+                <input type="email" class="signup-input" placeholder="Email" id="email" required>
+                <input type="password" class="signup-input" placeholder="Password" id="password" required>
+                <a href="homepage.html"><button type="button" class="signup-button" >Sign Up</button></a>
+            </form>
+        </div>
+    </section>
+
+    
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+    </html>

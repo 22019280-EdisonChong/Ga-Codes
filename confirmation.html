@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PayNotNow</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+
+        body {
+            font-family:Arial, Helvetica, sans-serif
+            
+        }
+
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+        }
+
+        .box {
+            
+            border-radius: 10px;
+        }
+
+        p{      
+                padding: 10px;
+                font-family: Montserrat;
+                font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PayNotNow</h1>
+    </header>
+
+    <div class="flex">
+        <div class="box">
+       
+            <p>Today's payment: $6.33
+               <br>on <span id="todayPaymentDate"></span>
+            </p>
+
+            <p>Second payment: $6.33
+                <br>on <span id="secondPaymentDate"></span>
+            </p>
+
+            <p>Third payment: $6.33
+                <br>on <span id="thirdPaymentDate"></span>
+            </p>
+
+            <a href="confirmation2.html">
+                <input type="button" value="Confirm" >
+            </a>    
+        </div>
+    </div>
+
+    <script>
+        function formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Intl.DateTimeFormat('en-US', options).format(date);
+        }
+
+        const today = new Date();
+        const secondPaymentDate = new Date(today);
+        secondPaymentDate.setMonth(today.getMonth() + 1);
+
+        const thirdPaymentDate = new Date(today);
+        thirdPaymentDate.setMonth(today.getMonth() + 2);
+
+        document.getElementById('todayPaymentDate').textContent = formatDate(today);
+        document.getElementById('secondPaymentDate').textContent = formatDate(secondPaymentDate);
+        document.getElementById('thirdPaymentDate').textContent = formatDate(thirdPaymentDate);
+
+    </script>
+
+</body>
+
+
+</html>

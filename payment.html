@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .flex {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PayNotNow</h1>
+    </header>
+
+    <div class="flex">
+
+        <form >
+            <label for="cardNumber">Card Number</label>
+            <input type="number" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+
+            <label for="cardHolderName">Card Holder Name</label>
+            <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Enter card holder name" required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YYYY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" placeholder="Enter CVV" required>
+
+           
+            <input type="button" value="Pay Now" id="pay" onclick="checkInputs()">
+           
+        </form>
+    </div>
+
+   <script>
+        function checkInputs() {
+            const amount1Input = document.getElementById("cardNumber");
+            const amount2Input = document.getElementById("cardHolderName");
+            const amount3Input = document.getElementById("expiry");
+            const amount4Input = document.getElementById("cvv");
+
+            if (amount1Input.value && amount2Input.value && amount3Input.value && amount4Input.value) {
+                window.location.href = "confirmation.html";
+            } else {
+                alert("Please fill in all payment amounts.");
+                
+            }
+        }
+    </script>
+
+</body>
+
+</html>
